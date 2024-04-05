@@ -109,10 +109,10 @@ H1 {
 }
 
 .courses-container {
-    width: 600px;
+/*    width: 600px;
     max-width: 600px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
 }
 
 .course-title {
@@ -187,6 +187,11 @@ H1 {
 
 .nav-tabs .nav-link {
     padding: 8px 40px;
+}
+
+#registro {
+    padding: 70px 0;
+    background-color: #f7f7f7;
 }
 
 #comites {
