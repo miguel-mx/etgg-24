@@ -115,6 +115,12 @@ H1 {
     margin-right: auto;*/
 }
 
+.courses-container a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+    color: black;
+}
+
 .course-title {
     font-weight: 700;
     font-size: 24px;
