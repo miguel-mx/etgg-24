@@ -88,7 +88,7 @@ body, html {
 }
 
 H1 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 44px;
     text-align: left;
@@ -164,7 +164,8 @@ H1 {
 
 .schedule-time {
     padding: 4px 16px;
-    min-width: 180px;
+    min-width: 120px;
+    font-size: 14px;
 }
 
 .schedule-event {
@@ -177,7 +178,7 @@ H1 {
 }
 
 .schedule-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 0em;
@@ -214,11 +215,11 @@ H1 {
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #fff;
     background-color: #000000;
-    padding: 8px 40px;
+    padding: 8px 12px;
 }
 
 .nav-tabs .nav-link {
-    padding: 8px 40px;
+    padding: 8px 12px;
 }
 
 #registro {
@@ -284,6 +285,10 @@ li {
         text-align: center;
     }
 
+    H1 {
+        font-size: 36px;
+    }
+
     .border-l {
         border-left: none;
     }
@@ -314,4 +319,28 @@ li {
         letter-spacing: 0em;
     }
 
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #fff;
+        background-color: #000000;
+        padding: 8px 40px;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 8px 40px;
+    }
+
+    .schedule-time {
+        padding: 4px 16px;
+        min-width: 180px;
+    }
+
+    .schedule-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 8px;
+        color: #333333;
+    }
 }
