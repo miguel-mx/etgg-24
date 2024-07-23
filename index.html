@@ -774,5 +774,28 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const days = ['tab-0', 'tab-1', 'tab-2', 'tab-3', 'tab-4'];
+        const today = new Date().getDay(); // 0 (Sunday) to 6 (Saturday)
+
+        // Adjust today to match Monday to Friday tabs
+        const dayIndex = (today + 6) % 7; // Shifts Sunday (0) to Saturday (6) to Monday (0) to Friday (4)
+
+        if (dayIndex >= 0 && dayIndex < days.length - 2) {
+            const activeTab = document.getElementById(days[dayIndex]);
+
+            // Remove 'active' class from all tabs
+            document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
+
+            // Add 'active' class to the current tab
+            activeTab.classList.add('active');
+
+            // Activate the corresponding tab panel
+            const tabEvent = new bootstrap.Tab(activeTab);
+            tabEvent.show();
+        }
+    });
+</script>
 </body>
 </html>
