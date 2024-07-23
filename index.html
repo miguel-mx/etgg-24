@@ -777,23 +777,21 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const days = ['tab-0', 'tab-1', 'tab-2', 'tab-3', 'tab-4'];
-        const today = new Date().getDay(); // 0 (Sunday) to 6 (Saturday)
+        const today = new Date().getDay();
 
-        // Adjust today to match Monday to Friday tabs
-        const dayIndex = (today + 6) % 7; // Shifts Sunday (0) to Saturday (6) to Monday (0) to Friday (4)
+        const dayIndex = (today + 6) % 7;
 
         if (dayIndex >= 0 && dayIndex < days.length - 2) {
             const activeTab = document.getElementById(days[dayIndex]);
+            const activePanelId = activeTab.getAttribute('href').substring(1);
 
-            // Remove 'active' class from all tabs
             document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(panel => panel.classList.remove('show', 'active'));
 
-            // Add 'active' class to the current tab
             activeTab.classList.add('active');
 
-            // Activate the corresponding tab panel
-            const tabEvent = new bootstrap.Tab(activeTab);
-            tabEvent.show();
+            const activePanel = document.getElementById(activePanelId);
+            activePanel.classList.add('show', 'active');
         }
     });
 </script>
