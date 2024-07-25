@@ -769,7 +769,6 @@
         <div class="copyright text-center">Universidad Nacional Autónoma de México (UNAM), Centro de Ciencias Matemáticas, Campus Morelia, Mich.</div>
         <div class="copyright text-center">Escuela de Teoría Geométrica de Grupos, Todos los derechos reservados © 2024, UNAM.</div>
         <div class="copyright text-center">Aviso de Privacidad</div>
-        </div>
     </div>
 </section>
 
@@ -781,7 +780,7 @@
 
         const dayIndex = (today + 6) % 7;
 
-        if (dayIndex >= 0 && dayIndex < days.length - 2) {
+        if (dayIndex >= 0 && dayIndex < days.length) {
             const activeTab = document.getElementById(days[dayIndex]);
             const activePanelId = activeTab.getAttribute('href').substring(1);
 
